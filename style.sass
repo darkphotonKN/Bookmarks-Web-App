@@ -19,6 +19,7 @@ $form-max-width: 40%
     margin-top: 50px
     margin-bottom: 50px
     margin-left: 0.5*$form-max-width
+
     h1 
       color: #718093
       margin-bottom: 150px
@@ -74,13 +75,14 @@ $form-max-width: 40%
     display: flex 
     flex-direction: column
     align-items: center
+
    
     #bookmarks-output 
       margin-top: 50px
       animation: bookmarks 500ms ease-in-out forwards 
       display: none
       
-      $left-right-pad: 40px
+      $left-right-pad: 30px
       .output
         display: none
         
@@ -88,15 +90,14 @@ $form-max-width: 40%
           display: flex
           flex-direction: row
           align-items: center
-          padding: 50px $left-right-pad
+          padding: 35px $left-right-pad
           text-align: left 
           background-color: #dcdde1
           border-radius: $main-bdr-rad
           margin-bottom: 20px
           font-size: 20px
           width: 800px
-          min-height: 50px
-          max-height: 100px
+          max-height: 50px
         
         .delete
           position: absolute
@@ -108,12 +109,18 @@ $form-max-width: 40%
         display: block
         
 
+    #results-btn
+      background-color: black
+      width: 120px
+      &:hover
+        background-color: #487eb0
 
 
-
+  // keep footer always   at 5vh from the bottom of the page
   #footer
     width: 100%
-    margin: 70px 0
+    position: fixed
+    bottom: 5vh
     text-align: center
     font-size: 12px
     opacity: 0.6
@@ -128,7 +135,7 @@ $form-max-width: 40%
     cursor: pointer
     background-color: #487eb0
     color: white
-    transition: all 200ms ease-in-out
+    transition: all 150ms ease-in-out
 
     &:hover
       background-color: black
@@ -164,16 +171,25 @@ $form-max-width: 40%
 /* Responsive Design */
 
 @media screen and (max-width: 1100px)
+
+  // remove title margin
+  #main-app #site-title
+    margin-left: 0px
+  // center title and resize
   #main-app #site-title h1 
     font-size: 25px
+    text-align: center
   
+  // resize form title
   #main-app #myForm h2.form-head
     font-size: 19px
 
+  // resize individual bookmarks
   #main-app #output-wrap #bookmarks-output .output.show
     font-size: 15px
     width: 400px
-
+    
+    // resize individual delete buttons of bookmarks
     .delete
       height: 25px
       width: 60px

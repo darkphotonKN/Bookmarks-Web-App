@@ -54,7 +54,7 @@ function deleteBookmark(url) {
     for(let i=0; i<bookmarks.length; i++) {
         if(bookmarks[i].url == url) { // check JSON object's 'url' property matches
             // remove from array
-            bookmarks.splice(i, 1); // remove the one
+            bookmarks.splice(i, 1); // remove the one match 
         }
     }
     console.log(bookmarks);
