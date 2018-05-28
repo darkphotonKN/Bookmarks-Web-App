@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; }
+
+#main-app {
+  height: 200vh;
+  width: 100%;
+  overflow: hidden; }
+  #main-app #site-title {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20%; }
+    #main-app #site-title h1 {
+      color: #718093;
+      margin-bottom: 150px; }
+  #main-app #myForm {
+    border-radius: 5px;
+    font-size: 15px;
+    max-width: 40%;
+    min-width: 400px;
+    min-height: 380px;
+    height: 37vh;
+    margin: 10px auto 10px;
+    background-color: #dcdde1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    #main-app #myForm h2 {
+      font-size: 30px;
+      margin-bottom: 50px;
+      color: #487eb0; }
+    #main-app #myForm .from-group {
+      width: 100%;
+      text-align: center; }
+      #main-app #myForm .from-group label {
+        font-weight: bold;
+        font-size: 17px;
+        display: block; }
+      #main-app #myForm .from-group input {
+        height: 33px;
+        width: 70%;
+        margin: 7px 0 7px;
+        border-radius: 5px;
+        border: #487eb0 2px solid;
+        padding: 0 0.3em; }
+  #main-app #output-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #main-app #output-wrap #bookmarks-output {
+      margin-top: 50px;
+      animation: bookmarks 500ms ease-in-out forwards;
+      display: none; }
+      #main-app #output-wrap #bookmarks-output .output {
+        display: none; }
+        #main-app #output-wrap #bookmarks-output .output.show {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 50px 40px;
+          text-align: left;
+          background-color: #dcdde1;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          font-size: 20px;
+          width: 800px;
+          min-height: 50px;
+          max-height: 100px; }
+        #main-app #output-wrap #bookmarks-output .output .delete {
+          position: absolute;
+          right: 0;
+          margin-top: 0;
+          margin-right: 40px; }
+      #main-app #output-wrap #bookmarks-output.show {
+        display: block; }
+  #main-app #footer {
+    width: 100%;
+    margin: 70px 0;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6; }
+  #main-app .btn {
+    height: 37px;
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: #487eb0 2px solid;
+    cursor: pointer;
+    background-color: #487eb0;
+    color: white;
+    transition: all 200ms ease-in-out; }
+    #main-app .btn:hover {
+      background-color: black; }
+
+/* Animations */
+@keyframes bookmarks {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0.2; }
+  30% {
+    transform: translateY(250px);
+    opacity: 0.2; }
+  50% {
+    transform: translateY(200px);
+    opacity: 0.3; }
+  60% {
+    transform: translateY(150px);
+    opacity: 0.4; }
+  80% {
+    transform: translateY(100px);
+    opacity: 0.5; }
+  90% {
+    transform: translateY(50px);
+    opacity: 0.7; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+/* Responsive Design */
+@media screen and (max-width: 1100px) {
+  #main-app #site-title h1 {
+    font-size: 25px; }
+
+  #main-app #myForm h2.form-head {
+    font-size: 19px; }
+
+  #main-app #output-wrap #bookmarks-output .output.show {
+    font-size: 15px;
+    width: 400px; }
+    #main-app #output-wrap #bookmarks-output .output.show .delete {
+      height: 25px;
+      width: 60px; } }
+
+/*# sourceMappingURL=style.css.map */

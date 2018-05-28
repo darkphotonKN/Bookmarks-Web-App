@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookmarker</title>
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Single Page Bookmarker Web Application -->
+    <div id="main-app">
+        <div id="site-title">
+            <h1>The Bookmarker</h1> 
+        </div>
+        <form id="myForm">
+            <h2 class="form-head">Bookmark Your Favorite Sites</h2>
+            <div class="from-group">
+                <label>Site Name</label>
+                <input type="text" class="form-control" id="siteName" placeholder=" Website Name">
+            </div>
+            <div class="from-group">
+                <label>Site URL</label>
+                <input type="text" class="form-control" id="siteUrl" placeholder=" Website URL">
+            </div>  
+            <button type="submit" class="btn">Submit</button>          
+        </form>
+        
+        <div id="output-wrap">
+            <button type="submit" class="btn" id="results-btn">View Bookmarks</button>
+
+            <div id="bookmarks-output">
+
+                
+            </div>
+        </div>
+
+        <div id="footer">&copy; The Bookmarker 2018</div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+
+
+</html>
